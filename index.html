@@ -84,7 +84,7 @@
     <div class="container">
         <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
         <div class="graffiti">Saustall - The Next Generation</div>
-        <p class="highlight">Bringen Sie Ihre Liebsten mit – Familienfreundlich und unvergesslich!</p>
+        <p class="highlight">Bringen Sie Ihre Familie mit – Das ist ein Muss!</p>
         <p>Bis zur besten Zeit deines Lebens sind es noch:</p>
         <div id="countdown"></div>
         <p>
@@ -117,7 +117,6 @@
             <li>Wähle die Option <strong>"Freunde und Familie"</strong>, um Gebühren zu vermeiden.</li>
             <li>Gib im Verwendungszweck <strong>"Saustallfeier 2026" und deinen Vor- und Nachnamen</strong> an.</li>
         </ul>
-        <img src="file-Fy9KEhnRVtkgL5fSE6NXea" alt="PayPal QR-Code" style="margin: 20px auto; width: 300px;">
     </div>
     <footer>
         © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
@@ -139,8 +138,8 @@
 
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % 1000) / 1000);
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
                 countdownElement.innerHTML = `
                     ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
