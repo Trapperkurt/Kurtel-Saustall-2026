@@ -1,0 +1,106 @@
+# Kurtel-Saustall-2026
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>40 Jahre Kurtel & 20 Jahre Saustall</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1 {
+            font-size: 2.8em;
+            color: #333;
+        }
+        h2 {
+            font-size: 1.8em;
+            color: #666;
+            margin: 10px 0;
+        }
+        p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.5;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        #countdown {
+            font-size: 2em;
+            color: #333;
+            margin: 30px 0;
+        }
+        .button {
+            margin-top: 30px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
+        <h2>Saustall - The Next Generation</h2>
+        <p>
+            Herzlich willkommen zu einem besonderen Jubiläum: Wir feiern 40 Jahre Kurtel und 20 Jahre Saustall! 
+            Vom 03. bis 06. Juli 2026 erwarten euch unvergessliche Tage voller Spaß, Erinnerungen und Abenteuer. 
+            Unsere Unterkunft bietet Platz für bis zu 49 Personen in einer traumhaften Lage mitten in der Natur, 
+            mit Aufenthaltsräumen, Grillplatz und vielen Aktivitäten.
+        </p>
+        <p>
+            Freut euch auf Highlights wie ein großes Lagerfeuer, Bogenschießen, Fußballturniere, Kinderdisco, 
+            eine Party für die Erwachsenen und vieles mehr! Diese Feier ist für Groß und Klein ein Ereignis, 
+            das ihr nicht verpassen dürft. 
+        </p>
+        <div id="countdown"></div>
+        <p>Weitere Details zur Anmeldung und Teilnahme folgen in Kürze. Save the Date!</p>
+        <a href="#" class="button">Mehr erfahren</a>
+    </div>
+    <footer>
+        © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
+    </footer>
+
+    <script>
+        function updateCountdown() {
+            const eventDate = new Date("July 3, 2026 15:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = `
+                ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
+            `;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown").innerHTML = "Die Feier hat begonnen!";
+            }
+        }
+
+        const countdownTimer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+</html>

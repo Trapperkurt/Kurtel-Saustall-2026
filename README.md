@@ -1,1 +1,0 @@
-# Kurtel-Saustall-2026
