@@ -1,4 +1,4 @@
-# SAUSTALL 03.07.2026 - 06.07.2026 -SAVE THE DATE-
+# SAUSTALL 03.07.2026 - 06.07.2026 -SAVE THE DATE
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -39,6 +39,10 @@
             margin: 30px 0;
             color: #00FF00;
             text-shadow: 0 0 10px #00FF00;
+        }
+        .highlight {
+            font-weight: bold;
+            text-shadow: 0 0 5px red;
         }
         .song {
             font-size: 1.5em;
@@ -83,6 +87,15 @@
             <span class="song rainbow">"Hey Baby Baby, du bist sensationell"</span>, 
             <span class="song rainbow">"OPP - OriginalPimmelPirat"</span> und viele mehr!
         </p>
+        <p class="highlight">
+            Außerdem erwarten euch: 
+        </p>
+        <ul style="text-align: left; display: inline-block; text-align: left;">
+            <li>Ein episches <span class="rainbow">Lagerfeuer</span> mit Stockbrot</li>
+            <li>Leckeres <span class="rainbow">Grillen</span> mit allerlei Köstlichkeiten</li>
+            <li>Ein spannendes <span class="rainbow">Bogenschießen</span>-Event</li>
+            <li>Und eine unvergessliche <span class="rainbow">Wasserschlacht</span> für Groß und Klein!</li>
+        </ul>
         <div id="countdown"></div>
         <p>Weitere Details zur Anmeldung und Teilnahme folgen in Kürze. Save the Date!</p>
     </div>
@@ -98,7 +111,7 @@
 
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
             document.getElementById("countdown").innerHTML = `
