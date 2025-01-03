@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>40 Jahre Kurtel & 20 Jahre Saustall</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -23,9 +25,11 @@
             color: #fff;
             text-shadow: 0 0 10px #fff;
         }
-        h2 {
-            font-size: 2em;
-            color: #ccc;
+        .graffiti {
+            font-family: 'Permanent Marker', cursive;
+            font-size: 2.5em;
+            color: #ff007f;
+            text-shadow: 2px 2px 5px #ff0000, -2px -2px 5px #00ff00, 2px -2px 5px #0000ff;
             margin: 20px 0;
         }
         p {
@@ -48,36 +52,6 @@
             color: #00FF00;
             text-shadow: 0 0 10px #00FF00;
         }
-        .highlight {
-            font-weight: bold;
-            text-shadow: 0 0 5px red;
-        }
-        .song {
-            font-size: 1.5em;
-            font-weight: bold;
-            animation: blink 1s infinite;
-        }
-        .rainbow {
-            animation: rainbow 2s infinite linear;
-        }
-        img {
-            margin: 20px 0;
-            width: 300px;
-            height: auto;
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.5; }
-            100% { opacity: 1; }
-        }
-        @keyframes rainbow {
-            0% { color: red; }
-            20% { color: orange; }
-            40% { color: yellow; }
-            60% { color: green; }
-            80% { color: blue; }
-            100% { color: violet; }
-        }
         footer {
             margin-top: 50px;
             font-size: 0.9em;
@@ -88,9 +62,9 @@
 <body>
     <div class="container">
         <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
+        <div class="graffiti">Saustall - The Next Generation</div>
         <p>Bis zur besten Zeit deines Lebens sind es noch:</p>
         <div id="countdown"></div>
-        <h2>Saustall - The Next Generation</h2>
         <p>
             Mach dich bereit für das Event des Jahres! Wir feiern gemeinsam vom 03. bis 06. Juli 2026 in einer atemberaubenden Location. 
             Erlebe unvergessliche Momente voller Spaß, Musik und Abenteuer. Sei dabei, wenn wir Geschichte schreiben!
@@ -116,14 +90,11 @@
         <p>
             Die Zahlung erfolgt über PayPal. Bitte überweise den Betrag bis spätestens <span class="rainbow">15.12.2025</span>.
         </p>
-        <p>So funktioniert die Zahlung:</p>
         <ul>
-            <li>Scanne den QR-Code unten mit deinem Smartphone.</li>
-            <li>Oder überweise direkt per PayPal an: <span class="rainbow">guateescalida@gmx.de</span>.</li>
+            <li>Überweise direkt per PayPal an: <span class="rainbow">guateescalida@gmx.de</span>.</li>
             <li>Wähle die Option <strong>"Freunde und Familie"</strong>, um Gebühren zu vermeiden.</li>
             <li>Gib im Verwendungszweck <strong>"Saustallfeier 2026" und deinen Vor- und Nachnamen</strong> an.</li>
         </ul>
-        <img src="file-9t8NJNUkTN35Q4LRiNBV7H" alt="PayPal QR-Code">
     </div>
     <footer>
         © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
