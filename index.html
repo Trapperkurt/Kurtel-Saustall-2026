@@ -9,28 +9,29 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: black;
-            color: white;
+            background-color: #000;
+            color: #fff;
             margin: 0;
             padding: 0;
         }
         .container {
             margin-top: 50px;
+            padding: 0 20px;
         }
         h1 {
             font-size: 3em;
-            color: white;
+            color: #fff;
             text-shadow: 0 0 10px #fff;
         }
         h2 {
             font-size: 2em;
-            color: gray;
-            margin: 10px 0;
+            color: #ccc;
+            margin: 20px 0;
         }
         p {
             font-size: 1.2em;
             line-height: 1.5;
-            color: white;
+            color: #fff;
             margin: 20px auto;
             max-width: 800px;
         }
@@ -43,7 +44,7 @@
         }
         #countdown {
             font-size: 2em;
-            margin: 20px 0;
+            margin: 30px 0;
             color: #00FF00;
             text-shadow: 0 0 10px #00FF00;
         }
@@ -80,20 +81,19 @@
         footer {
             margin-top: 50px;
             font-size: 0.9em;
-            color: gray;
+            color: #888;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
+        <p>Bis zur besten Zeit deines Lebens sind es noch:</p>
         <div id="countdown"></div>
-        <p>Bis zur besten Zeit deines Lebens: so viele Tage, Stunden, Minuten und Sekunden!</p>
         <h2>Saustall - The Next Generation</h2>
         <p>
-            Familien mitzunehmen ist Pflicht! Gemeinsam feiern wir vom 03. bis 06. Juli 2026 in einer einzigartigen Location.
-            Für Verpflegung wird bestens gesorgt, und abends erwartet euch eine legendäre Party mit den größten musikalischen 
-            Hits von Saustallrecords.
+            Mach dich bereit für das Event des Jahres! Wir feiern gemeinsam vom 03. bis 06. Juli 2026 in einer atemberaubenden Location. 
+            Erlebe unvergessliche Momente voller Spaß, Musik und Abenteuer. Sei dabei, wenn wir Geschichte schreiben!
         </p>
         <p>
             Zu den musikalischen Highlights gehören: 
@@ -101,6 +101,13 @@
             <span class="song rainbow">"Hey Baby Baby, du bist sensationell"</span>, 
             <span class="song rainbow">"OPP - OriginalPimmelPirat"</span> und viele mehr!
         </p>
+        <h2>Highlights der Feier</h2>
+        <ul>
+            <li>Ein episches <span class="rainbow">Lagerfeuer</span> mit Stockbrot</li>
+            <li>Leckeres <span class="rainbow">Grillen</span> mit allerlei Köstlichkeiten</li>
+            <li>Ein spannendes <span class="rainbow">Bogenschießen</span>-Event</li>
+            <li>Und eine unvergessliche <span class="rainbow">Wasserschlacht</span> für Groß und Klein!</li>
+        </ul>
         <h2>Teilnahmebeitrag</h2>
         <ul>
             <li><span class="rainbow">Einzelpersonen:</span> Mindestbeitrag 50 €, fairer Beitrag 75 €, Solidaritätsbeitrag 100 €</li>
@@ -117,13 +124,6 @@
             <li>Gib im Verwendungszweck <strong>"Saustallfeier 2026" und deinen Vor- und Nachnamen</strong> an.</li>
         </ul>
         <img src="file-9t8NJNUkTN35Q4LRiNBV7H" alt="PayPal QR-Code">
-        <h2>Highlights der Feier</h2>
-        <ul>
-            <li>Ein episches <span class="rainbow">Lagerfeuer</span> mit Stockbrot</li>
-            <li>Leckeres <span class="rainbow">Grillen</span> mit allerlei Köstlichkeiten</li>
-            <li>Ein spannendes <span class="rainbow">Bogenschießen</span>-Event</li>
-            <li>Und eine unvergessliche <span class="rainbow">Wasserschlacht</span> für Groß und Klein!</li>
-        </ul>
     </div>
     <footer>
         © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
@@ -138,7 +138,7 @@
             const days = Math.floor(distance / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            const seconds = Math.floor((distance % 1000) / 1000);
 
             document.getElementById("countdown").innerHTML = `
                 ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
