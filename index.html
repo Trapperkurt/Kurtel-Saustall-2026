@@ -28,8 +28,8 @@
         .graffiti {
             font-family: 'Permanent Marker', cursive;
             font-size: 2.5em;
-            color: #ff007f;
-            text-shadow: 2px 2px 5px #ff0000, -2px -2px 5px #00ff00, 2px -2px 5px #0000ff;
+            color: #00ff00;
+            text-shadow: 2px 2px 5px #008000;
             margin: 20px 0;
         }
         p {
@@ -52,6 +52,26 @@
             color: #00FF00;
             text-shadow: 0 0 10px #00FF00;
         }
+        .rainbow {
+            animation: rainbow 2s infinite linear;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #FFD700;
+        }
+        .song {
+            font-size: 1.5em;
+            font-weight: bold;
+            animation: rainbow 2s infinite linear;
+        }
+        @keyframes rainbow {
+            0% { color: red; }
+            20% { color: orange; }
+            40% { color: yellow; }
+            60% { color: green; }
+            80% { color: blue; }
+            100% { color: violet; }
+        }
         footer {
             margin-top: 50px;
             font-size: 0.9em;
@@ -71,9 +91,9 @@
         </p>
         <p>
             Zu den musikalischen Highlights gehören: 
-            <span class="song rainbow">"Fantasia - Unweite Weiten, so fern so nah"</span>, 
-            <span class="song rainbow">"Hey Baby Baby, du bist sensationell"</span>, 
-            <span class="song rainbow">"OPP - OriginalPimmelPirat"</span> und viele mehr!
+            <span class="song">"Fantasia - Unweite Weiten, so fern so nah"</span>, 
+            <span class="song">"Hey Baby Baby, du bist sensationell"</span>, 
+            <span class="song">"OPP - OriginalPimmelPirat"</span> und viele mehr!
         </p>
         <h2>Highlights der Feier</h2>
         <ul>
@@ -103,25 +123,27 @@
     <script>
         function updateCountdown() {
             const eventDate = new Date("July 3, 2026 15:00:00").getTime();
-            const now = new Date().getTime();
-            const distance = eventDate - now;
+            setInterval(() => {
+                const now = new Date().getTime();
+                const distance = eventDate - now;
 
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % 1000) / 1000);
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = `
-                ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
-            `;
+                document.getElementById("countdown").innerHTML = `
+                    ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
+                `;
 
-            if (distance < 0) {
-                clearInterval(countdownTimer);
-                document.getElementById("countdown").innerHTML = "Die Feier hat begonnen!";
-            }
+                if (distance < 0) {
+                    clearInterval();
+                    document.getElementById("countdown").innerHTML = "Die Feier hat begonnen!";
+                }
+            }, 1000);
         }
 
-        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown();
     </script>
 </body>
 </html>
