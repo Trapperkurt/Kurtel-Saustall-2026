@@ -84,7 +84,7 @@
     <div class="container">
         <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
         <div class="graffiti">Saustall - The Next Generation</div>
-        <p class="highlight">Familien mitzubringen ist Pflicht!</p>
+        <p class="highlight">Bringen Sie Ihre Liebsten mit – Familienfreundlich und unvergesslich!</p>
         <p>Bis zur besten Zeit deines Lebens sind es noch:</p>
         <div id="countdown"></div>
         <p>
@@ -92,7 +92,7 @@
             Erlebe unvergessliche Momente voller Spaß, Musik und Abenteuer. Sei dabei, wenn wir Geschichte schreiben!
         </p>
         <p>
-            Zu den musikalischen Highlights gehören: 
+            <strong>Musikalische Highlights:</strong> Erleben Sie einzigartige Performances, darunter: 
             <span class="song">"Fantasia - Unweite Weiten, so fern so nah"</span>, 
             <span class="song">"Hey Baby Baby, du bist sensationell"</span>, 
             <span class="song">"OPP - OriginalPimmelPirat"</span> und viele mehr!
@@ -117,7 +117,7 @@
             <li>Wähle die Option <strong>"Freunde und Familie"</strong>, um Gebühren zu vermeiden.</li>
             <li>Gib im Verwendungszweck <strong>"Saustallfeier 2026" und deinen Vor- und Nachnamen</strong> an.</li>
         </ul>
-        <img src="file-UXJTJ75RXCiKQ7Fr5bvsqj" alt="PayPal QR-Code" style="margin: 20px auto; width: 300px;">
+        <img src="file-Fy9KEhnRVtkgL5fSE6NXea" alt="PayPal QR-Code" style="margin: 20px auto; width: 300px;">
     </div>
     <footer>
         © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
@@ -126,23 +126,25 @@
     <script>
         function updateCountdown() {
             const eventDate = new Date("July 3, 2026 15:00:00").getTime();
-            setInterval(() => {
+            const countdownElement = document.getElementById("countdown");
+            const interval = setInterval(() => {
                 const now = new Date().getTime();
                 const distance = eventDate - now;
 
+                if (distance < 0) {
+                    clearInterval(interval);
+                    countdownElement.innerHTML = "Die Feier hat begonnen!";
+                    return;
+                }
+
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const minutes = Math.floor((distance % (1000 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % 1000) / 1000);
 
-                document.getElementById("countdown").innerHTML = `
+                countdownElement.innerHTML = `
                     ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
                 `;
-
-                if (distance < 0) {
-                    clearInterval();
-                    document.getElementById("countdown").innerHTML = "Die Feier hat begonnen!";
-                }
             }, 1000);
         }
 
