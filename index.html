@@ -32,6 +32,10 @@
             text-shadow: 2px 2px 5px #008000;
             margin: 20px 0;
         }
+        .highlight {
+            font-weight: bold;
+            color: #FFD700;
+        }
         p {
             font-size: 1.2em;
             line-height: 1.5;
@@ -52,10 +56,7 @@
             color: #00FF00;
             text-shadow: 0 0 10px #00FF00;
         }
-        .rainbow {
-            animation: rainbow 2s infinite linear;
-        }
-        .highlight {
+        .email {
             font-weight: bold;
             color: #FFD700;
         }
@@ -83,6 +84,7 @@
     <div class="container">
         <h1>40 Jahre Kurtel & 20 Jahre Saustall</h1>
         <div class="graffiti">Saustall - The Next Generation</div>
+        <p class="highlight">Familien mitzubringen ist Pflicht!</p>
         <p>Bis zur besten Zeit deines Lebens sind es noch:</p>
         <div id="countdown"></div>
         <p>
@@ -97,24 +99,25 @@
         </p>
         <h2>Highlights der Feier</h2>
         <ul>
-            <li>Ein episches <span class="rainbow">Lagerfeuer</span> mit Stockbrot</li>
-            <li>Leckeres <span class="rainbow">Grillen</span> mit allerlei Köstlichkeiten</li>
-            <li>Ein spannendes <span class="rainbow">Bogenschießen</span>-Event</li>
-            <li>Und eine unvergessliche <span class="rainbow">Wasserschlacht</span> für Groß und Klein!</li>
+            <li>Ein episches <span class="song">Lagerfeuer</span> mit Stockbrot</li>
+            <li>Leckeres <span class="song">Grillen</span> mit allerlei Köstlichkeiten</li>
+            <li>Ein spannendes <span class="song">Bogenschießen</span>-Event</li>
+            <li>Und eine unvergessliche <span class="song">Wasserschlacht</span> für Groß und Klein!</li>
         </ul>
         <h2>Teilnahmebeitrag</h2>
         <ul>
-            <li><span class="rainbow">Einzelpersonen:</span> Mindestbeitrag 50 €, fairer Beitrag 75 €, Solidaritätsbeitrag 100 €</li>
-            <li><span class="rainbow">Familien:</span> Mindestbeitrag 100 €, fairer Beitrag 150 €, Solidaritätsbeitrag 200 €</li>
+            <li><span class="song">Einzelpersonen:</span> Mindestbeitrag 50 €, fairer Beitrag 75 €, Solidaritätsbeitrag 100 €</li>
+            <li><span class="song">Familien:</span> Mindestbeitrag 100 €, fairer Beitrag 150 €, Solidaritätsbeitrag 200 €</li>
         </ul>
         <p>
-            Die Zahlung erfolgt über PayPal. Bitte überweise den Betrag bis spätestens <span class="rainbow">15.12.2025</span>.
+            Die Zahlung erfolgt über PayPal. Bitte überweise den Betrag bis spätestens <span class="song">15.12.2025</span>.
         </p>
         <ul>
-            <li>Überweise direkt per PayPal an: <span class="rainbow">guateescalida@gmx.de</span>.</li>
+            <li>Überweise direkt per PayPal an: <span class="email">guateescalida@gmx.de</span>.</li>
             <li>Wähle die Option <strong>"Freunde und Familie"</strong>, um Gebühren zu vermeiden.</li>
             <li>Gib im Verwendungszweck <strong>"Saustallfeier 2026" und deinen Vor- und Nachnamen</strong> an.</li>
         </ul>
+        <img src="file-UXJTJ75RXCiKQ7Fr5bvsqj" alt="PayPal QR-Code" style="margin: 20px auto; width: 300px;">
     </div>
     <footer>
         © 2025 Kurtel & Saustall - Alle Rechte vorbehalten
@@ -130,7 +133,7 @@
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                const seconds = Math.floor((distance % 1000) / 1000);
 
                 document.getElementById("countdown").innerHTML = `
                     ${days} Tage ${hours} Stunden ${minutes} Minuten ${seconds} Sekunden
