@@ -1,12 +1,62 @@
+<!-- COUNTDOWN SCRIPT -->
+<script>
+const countdownDate = new Date("July 3, 2026 15:00:00").getTime();
+
+const countdownFunction = setInterval(function () {
+
+  const now = new Date().getTime();
+  const distance = countdownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML =
+    days + " Tage " +
+    hours + " Stunden " +
+    minutes + " Minuten " +
+    seconds + " Sekunden";
+
+  if (distance < 0) {
+    clearInterval(countdownFunction);
+    document.getElementById("countdown").innerHTML =
+      "🔥 DER SAUSTALL HAT BEGONNEN 🔥";
+  }
+
+}, 1000);
+</script>
+
+<style>
+.countdown-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.countdown {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #ffcc00;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+}
+</style>
+
 <section class="hero">
+
   <h1># SAUSTALL 03.07.2026 - 05.07.2026 - FINAL CALL</h1>
 
   <h2>40 Jahre Kurtel & 20 Jahre Saustall</h2>
   <h3>Saustall – The Next Generation</h3>
 
-  <p><strong>Bitte bringt eure Familie mit – wir wollen gemeinsam feiern!</strong></p>
+  <p>
+    <strong>Bitte bringt eure Familie mit – wir wollen gemeinsam feiern!</strong>
+  </p>
 
-  <div id="countdown"></div>
+  <section class="countdown-section">
+    <h2>⏳ Bis zur besten Zeit deines Lebens sind es noch:</h2>
+    <div id="countdown" class="countdown"></div>
+  </section>
 
   <p>
     Mach dich bereit für das Event des Jahres!
@@ -43,9 +93,11 @@
     Das sind wahrscheinlich wieder die Panzer der Panzerbrigade 21
     aus der Rommel-Kaserne nebenan.
   </p>
+
 </section>
 
 <section>
+
   <h2>🔥 Wochenendablauf</h2>
 
   <h3>Freitag – Ankommen, Buffet & Lagerfeuer</h3>
@@ -55,13 +107,15 @@
   </p>
 
   <p>
-    Erstmal entspannt ankommen, Zimmer beziehen, Zelte aufbauen,
-    Leute begrüßen, Musik hören und langsam in den Saustallmodus wechseln.
+    Erstmal entspannt ankommen, Zimmer beziehen,
+    Zelte aufbauen, Leute begrüßen, Musik hören
+    und langsam in den Saustallmodus wechseln.
   </p>
 
   <p>
-    Abends gibt es gemeinsames Essen als Buffet, kalte Getränke,
-    Lagerfeuer, Stockbrot und entspanntes Zusammensitzen bis tief in die Nacht.
+    Abends gibt es gemeinsames Essen als Buffet,
+    kalte Getränke, Lagerfeuer, Stockbrot
+    und entspanntes Zusammensitzen bis tief in die Nacht.
   </p>
 
   <h3>Samstag – Kinderchaos & Saustallmodus</h3>
@@ -72,29 +126,26 @@
 
   <p>
     Tagsüber gibt es Kinderbespaßung, Musik, Chillen,
-    spontane Aktionen, Gespräche, draußen sitzen und irgendwo wahrscheinlich
-    immer jemanden mit einem Bier in der Hand.
+    spontane Aktionen, Gespräche, draußen sitzen
+    und irgendwo wahrscheinlich immer jemanden mit einem Bier in der Hand.
   </p>
 
   <p>
     Mittags gibt es kleinere Snacks und Hotdogs.
   </p>
 
-  <p>
-    Nachmittags öffnet dann wieder:
-  </p>
-
   <h2>🌮 Don Fabian’s Taqueria 🌮</h2>
 
   <p>
-    Mit frischen Tacos, kalten Getränken und allem,
+    Nachmittags öffnet Don Fabian’s Taqueria
+    mit frischen Tacos, kalten Getränken und allem,
     was man für einen stabilen Saustall-Samstag braucht.
   </p>
 
   <p>
     Zusätzlich gibt es Grillwürstchen, Nudeln
-    und spontane Küchenexperimente irgendwo zwischen Festivalfeeling
-    und Kindergeburtstag auf Endstufe.
+    und spontane Küchenexperimente irgendwo zwischen
+    Festivalfeeling und Kindergeburtstag auf Endstufe.
   </p>
 
   <p>
@@ -119,9 +170,11 @@
   <p>
     Offizielles Auschecken und Abreise ist Sonntag gegen 15:00 Uhr.
   </p>
+
 </section>
 
 <section>
+
   <h2>⚡ Highlights</h2>
 
   <ul>
@@ -134,9 +187,11 @@
     <li>Haiopai für die Kleinen damit wir uns entspannt voll laufen lassen können</li>
     <li>Nostalgische Saustall-Vibes mit Next-Generation-Chaos</li>
   </ul>
+
 </section>
 
 <section>
+
   <h2>🏡 Unterkunft & Zimmer</h2>
 
   <p>
@@ -160,9 +215,11 @@
     Irgendwie kommen alle unter.
     Genau darum geht’s.
   </p>
+
 </section>
 
 <section>
+
   <h2>🎒 Bitte mitbringen</h2>
 
   <ul>
@@ -183,9 +240,11 @@
     Wer besondere Getränke, Snacks oder Spezialitäten
     mitbringen möchte, kann das natürlich sehr gerne tun.
   </p>
+
 </section>
 
 <section>
+
   <h2>💸 Teilnahmebeitrag</h2>
 
   <p>
@@ -246,9 +305,11 @@
     Die Personenzahl ist wichtig für Betten,
     Zimmerplanung und Verpflegung.
   </p>
+
 </section>
 
 <section class="footer">
+
   <p>
     👉 Sei dabei, wenn wir Geschichte schreiben –
     oder zumindest die halbe Pampa umkrempeln.
@@ -257,4 +318,5 @@
   <p>
     © 2026 Kurtel & Saustall – Alle Rechte vorbehalten
   </p>
+
 </section>
